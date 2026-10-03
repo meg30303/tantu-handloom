@@ -1,0 +1,291 @@
+@font-face {
+    font-family: "Ragick";
+    src: url("ragick.otf") format("opentype");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f5eee4;
+    color: #241c18;
+    font-family: Arial, sans-serif;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6%;
+    border-bottom: 1px solid rgba(36, 28, 24, 0.15);
+}
+
+.logo {
+    font-family: "Ragick", serif;
+    font-size: 30px;
+    color: #241c18;
+    text-decoration: none;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 35px;
+}
+
+.navbar nav a {
+    color: #241c18;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.bag {
+    border: none;
+    background: transparent;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+
+/* COLLECTION HERO */
+
+.collection-hero {
+    min-height: 65vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 80px 8%;
+}
+
+.eyebrow {
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+}
+
+.collection-hero h1 {
+    font-family: "Ragick", serif;
+    font-size: clamp(60px, 8vw, 120px);
+    font-weight: 400;
+    line-height: 0.95;
+    max-width: 1000px;
+}
+
+.collection-hero > p:last-child {
+    margin-top: 35px;
+    max-width: 450px;
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+
+/* SAREE SECTION */
+
+.saree-section {
+    padding: 100px 6%;
+}
+
+.section-heading {
+    margin-bottom: 60px;
+}
+
+.section-heading p {
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.section-heading h2 {
+    font-family: "Ragick", serif;
+    font-size: 55px;
+    font-weight: 400;
+}
+
+
+/* GRID */
+
+.saree-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 70px 35px;
+}
+
+
+/* SAREE CARD */
+
+.saree-card {
+    cursor: pointer;
+}
+
+.saree-image {
+    width: 100%;
+    height: 650px;
+    overflow: hidden;
+    background: #ddd;
+}
+
+.saree-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition: transform 0.8s ease;
+}
+
+.saree-card:hover .saree-image img {
+    transform: scale(1.05);
+}
+
+
+/* INFO */
+
+.saree-info {
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+.saree-info h3 {
+    font-family: "Ragick", serif;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.saree-info p {
+    grid-column: 1;
+    margin-top: 8px;
+    font-size: 12px;
+    opacity: 0.65;
+}
+
+.saree-info span {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    align-self: center;
+    font-size: 14px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .navbar nav {
+        display: none;
+    }
+
+    .collection-hero {
+        min-height: 60vh;
+        padding: 60px 7%;
+    }
+
+    .collection-hero h1 {
+        font-size: 60px;
+    }
+
+    .saree-section {
+        padding: 70px 5%;
+    }
+
+    .saree-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .saree-image {
+        height: 500px;
+    }
+
+}
+/* =================================
+   THREAD BACKGROUND
+================================= */
+
+.thread-background {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    z-index: -1;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    opacity: 0.45;
+}
+
+.thread-background svg {
+    width: 100%;
+    height: 100%;
+
+    overflow: visible;
+}
+
+
+/* Individual threads */
+
+.thread {
+    fill: none;
+
+    stroke: #48509b;
+
+    stroke-width: 1.2;
+
+    stroke-linecap: round;
+
+    vector-effect: non-scaling-stroke;
+
+    opacity: 0.35;
+}
+
+
+/* Different thread thicknesses */
+
+.thread-1 {
+    stroke-width: 3;
+}
+
+.thread-2 {
+    stroke-width: 0.8;
+}
+
+.thread-3 {
+    stroke-width: 1.4;
+}
+
+.thread-4 {
+    stroke-width: 0.7;
+}
+
+.thread-5 {
+    stroke-width: 2;
+}
+
+.thread-6 {
+    stroke-width: 0.8;
+}
+
+
+/* Make sure your actual content stays above */
+
+.navbar,
+main {
+    position: relative;
+    z-index: 1;
+}
